@@ -1,0 +1,29 @@
+module add git
+  2 module add kdiff3
+  3 module add firefox
+  4 
+  5 # GIT alias
+  6 source /proj/lterbsSwdi/ltegit_admin_jenkins/aliases/.gitaliases
+  7 alias gci 'git commit'
+  8 alias gl 'git log'
+  9 alias gpo 'git push origin'
+ 10 
+ 11 alias ec '/proj/lteEclipse/eecs_omf &' // git eclipse
+ 12 alias ccstream '/proj/lterbsSwdi/ccstream/latest/ccstream.sh rac' // RSARTE
+ 13 alias ghome 'cd /repo/${USER}/lrat/'
+ 14 alias racoam 'cd /repo/${USER}/racoam'
+ 15 alias c2 'cd /repo/${USER}/c2cc'
+ 16 alias ebb 'cd /repo/${USER}/ebb'
+ 17 alias gomflic 'cd /repo/${USER}/lrat/vobs/erbs/omf/licenseBl/handlerSwU'
+ 18 alias gpmapp 'cd /repo/${USER}/lrat/vobs/erbs/omf/pmBl/applicationSwU'
+ 19 alias genv 'source ${HOME}/.cshrc.user.git'
+ 20 
+ 21 # Command alias
+ 22 alias fa 'find . -name "*" | xargs grep'
+ 23 
+ 24 # Set color
+ 25 setenv LESS '-M -I -R'
+ 26 setenv GIT_BRANCH_CMD "sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'"
+ 27 setenv GET_CVIEW_CMD "sh -c '/usr/atria/bin/cleartool lsview -short -cview 2> /dev/null' | sed 's/.*/[&]/'"
+ 28 alias precmd 'set prompt = "%{\e[32;1m%}%{\e[37m%}%{\e[33m%}%m%{\e[37m%}:%{\e[32m%}`$GET_CVIEW_CMD`%{\e[37m%} %{\e[36m%}%c04%{\e[37m%}%{\e[32m%}`$GIT_BRANCH_CMD`%{\e[0m%} -> "'
+ 29 set prompt = "[%T:%n@%m%/]"'(%{\033[33m%}%$gbn%{\033[0m%}) > '
