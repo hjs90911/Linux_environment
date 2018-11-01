@@ -1,0 +1,16 @@
+# dir alias
+alias c2cc='cd /local/repo/ezjinha/c2cc'
+alias ebb='cd /local/repo/ezjinha/ebb'
+
+# git alias
+module add /proj/ltegit_admin_jenkins/aliases/gitaliases.module
+alias gl='git log'
+alias gci='git commit'
+alias gpo='git push origin'
+
+# Add git branch on the Bash command prompt
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
