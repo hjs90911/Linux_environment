@@ -26,8 +26,12 @@ set undolevels=1000             " Number of undo levels
 set backspace=indent,eol,start  " Backspace behaviour
 
 " Key map
-" nnoremap <expr> <Esc>[1;3A line('.') != 1 ? 'ddkP' : ''
-" inoremap <expr> <Esc>[1;3A line('.') != 1 ? <Esc>ddkPi : ''
+" version 1
+  " nnoremap <expr> <Esc>[1;3A line('.') != 1 ? 'ddkP' : ''
+  " inoremap <expr> <Esc>[1;3A line('.') != 1 ? <Esc>ddkPi : ''
+  " Problem: When cursor is at list line, the line is deleted
+
+" version 2
 nnoremap <Esc>[1;3A ^Ycc<Del><Up><CR><Up><Esc>Pi<End><Del><Esc><Home>
 inoremap <Esc>[1;3A <Esc>^Ycc<Del><Up><CR><Up><Esc>Pi<End><Del><Home>
 nnoremap <Esc>[1;3B ^Ycc<Del><End><CR><Esc>Pi<End><Del><Esc><Home>
