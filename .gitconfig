@@ -1,0 +1,34 @@
+[user]
+  name = ezjinha
+  email = jinsoo.han@ericsson.com
+[color]
+  status = auto
+  diff = auto
+  ui = auto
+  branch = auto
+[merge]
+  tool = kdiff3
+[fetch]
+  prune = true
+[submodules]
+  autoupdate = true
+[url "https://gerritmirror-ha.lmera.ericsson.se/a/"]
+  insteadOf = ssh://gerritmirror:29418/
+[url "https://gerrit.ericsson.se/a/"]
+  pushinsteadof = ssh://gerritmirror:29418/
+[url "ssh://gerrit.ericsson.se:29418"]
+  pushInsteadOf = ssh://gerritmirror:29418
+  pushInsteadOf = ssh://gerritmirror.rnd.ki.sw.ericsson.se:29418
+  pushInsteadOf = ssh://gerrit-slave-lte:29418
+  pushInsteadOf = ssh://gerrit-slave-lte.rnd.ki.sw.ericsson.se:29418
+  pushInsteadOf = ssh://gerritmirror-ha.rnd.ki.sw.ericsson.se:29418
+  pushInsteadOf = ssh://gerritmirror-ha.lmera.ericsson.se:29418
+  pushInsteadOf = ssh://gerritmirror.lmera.ericsson.se:29418
+[url "https://gerrit.ericsson.se/a"]
+  pushInsteadOf = https://gerritmirror/a
+  pushInsteadOf = https://gerritmirror.rnd.ki.sw.ericsson.se/a
+  pushInsteadOf = https://gerrit-slave-lte/a
+  pushInsteadOf = https://gerrit-slave-lte.rnd.ki.sw.ericsson.se/a
+  pushInsteadOf = https://gerritmirror-ha.rnd.ki.sw.ericsson.se/a
+  pushInsteadOf = https://gerritmirror-ha.lmera.ericsson.se/a
+  pushInsteadOf = https://gerritmirror.lmera.ericsson.se/a
