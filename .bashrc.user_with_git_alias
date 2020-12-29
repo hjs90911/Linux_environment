@@ -40,27 +40,27 @@ module add git
 module add kdiff3
 module add firefox
 
-VIM alias
-lias vi='vim'
+# VIM alias
+alias vi='vim'
 
-repo path
-lias c2='cd /local/repo/ezkimta/c2cc; source gitenv.sh'
-lias ra='cd /local/repo/ezkimta/racoam; source gitenv.sh'
-lias rcc='cd /local/repo/ezkimta/ebb; source gitenv.sh; cd /local/repo/ezkimta/ebb/rcc/carrier'
+# repo path
+alias c2='cd /local/repo/ezkimta/c2cc; source gitenv.sh'
+alias ra='cd /local/repo/ezkimta/racoam; source gitenv.sh'
+alias rcc='cd /local/repo/ezkimta/ebb; source gitenv.sh; cd /local/repo/ezkimta/ebb/rcc/carrier'
 
-find macro
-lias fcc='find . -name "*.cc" | xargs grep '
-lias fh='find . -name "*.h" | xargs grep '
-lias fa='find . -name "*" | xargs grep '
+# find macro
+alias fcc='find . -name "*.cc" | xargs grep '
+alias fh='find . -name "*.h" | xargs grep '
+alias fa='find . -name "*" | xargs grep '
 
-git macro
-lias gml='git log master | vim -'
-lias gr='git remote show origin | grep ezkimta'
+# git macro
+alias gml='git log master | vim -'
+alias gr='git remote show origin | grep ezkimta'
 
-Compile alias
-lias mc='make realclean'
-lias ma='make all USE_GCOV=1'
-lias mt='make test USE_GCOV=1'
+# Compile alias
+alias mc='make realclean'
+alias ma='make all USE_GCOV=1'
+alias mt='make test USE_GCOV=1'
 
-MCT alias
-lias mct='cd /local/repo/ezkimta/racoam/rnTest/suites'
+#RACOAM MCT alias
+alias mct='cd /local/repo/$USER/racoam/rnTest/suites'
